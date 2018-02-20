@@ -10,11 +10,13 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 45px;
+    background: linear-gradient(to right, #000000, #00E39F);
+  height: 50px;
   padding: 0px;
   color: white;
-  box-shadow: 0px .5px 5px #000000;
+  border-bottom: .02px solid white;
+box-shadow: 10px 15px 5px #000000;
+
 
 }
 
@@ -22,7 +24,7 @@
   font-size: 1.3em;
   float: right;
   margin-right: 5%;
-  margin-top: 12px;
+  margin-top: 10px;
   display: inline-block;
   padding: 0px;
 
@@ -39,9 +41,11 @@ header a{
   text-decoration: none;
   text-transform: uppercase;
   font-size: 15px;
+
 }
 header a:hover{
   color: #39c6f9;
+    text-decoration: none;
   font-weight: bold;
 }
 
@@ -128,7 +132,15 @@ padding-bottom: 20px;
   margin-top: 90px;
   margin-left: 25%;
 }
+.youtube{
+  border: 2px #48dbfb dashed;
+  margin-top: 20px;
+  text-align: center;
+}
 
+.card{
+  margin: 10px;
+}
 
 
 

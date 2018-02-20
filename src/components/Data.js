@@ -3,49 +3,60 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
 class Data extends Component {
+
+
+  constructor(props){
+    super(props)
+    this.state = {
+      posts: [],
+    };
+  }
+
+componentDidMount(){
+
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(data => {
+      let postz = data.map((post) => {
+        return(
+          <div key= {post.id}>
+             <p>{post.userId}</p>
+             <p>{post.title}</p>
+             <p>{post.body}</p>
+          </div>
+
+        )
+      })
+
+        this.setState({posts: postz});
+        console.log("state post", this.state.posts);
+        console.log("state", this.state);
+        this.something(postz);
+
+        for(let i = 0; i < postz.length; i ++){
+        console.log('hi2' + postz);
+      }
+  })
+
+}
+something(posts){
+
+  for(let i = 0; i < posts.length; i ++)
+  console.log('hi' + posts[i]);
+}
+
+
   render() {
 
+    return(
 
-    return (
+<div className="data">
+ {this.state.posts}
 
-      <div className="well">Basic Well
-
-          <div className="row">
-            <div className="col-xl-12 col-centered">
-              <table class="table table-striped table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
-  </div>
 </div>
+
 
     );
   }

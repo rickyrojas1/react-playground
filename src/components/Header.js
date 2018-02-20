@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "../img/logo.svg";
 import "../App.css";
+import Clock from "./Clock";
 
 
 class Header extends Component {
@@ -11,6 +12,9 @@ class Header extends Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <ul className="menu">
+          <li>
+            <a href="#"><Clock /></a>
+          </li>
           <li>
             <a href="#">Home</a>
           </li>
