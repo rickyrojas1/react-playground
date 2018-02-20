@@ -24,10 +24,10 @@ class Youtube extends Component {
   }
 
   render() {
-    return (<div>
+    return (<div >
       {
-        this.state.people.map((users, i) => <div>
-          {console.log(i + " " + users.cell)}
+        this.state.people.map((users, i) => <div >
+          
           <Card user={users}/>
         </div>)
 

@@ -15,17 +15,30 @@ class Card extends Component {
   render() {
     return (
 
-      <div className="card text-center">
+      <div className="card text-center" >
         <div className="card-header">
-        <h1>{this.props.user.name.first + " " + this.props.user.name.last} </h1>
+        <strong><h1>{this.props.user.name.first + " " + this.props.user.name.last }  <img src={this.props.user.picture.thumbnail} className="thumbnail"/></h1></strong>
         </div>
         <div className="card-block">
-          <h4 className="card-title">The Gender is: {this.props.user.gender}</h4>
-          <p className="card-text">The Cell Phone is: {this.props.user.cell}</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          <div className="left-card">
+
+          <p className="card-text"><strong>Adress:</strong> </p>
+          <p className="card-text"><strong>Street:</strong> {this.props.user.location.street}</p>
+          <p className="card-text"><strong>City:</strong> {this.props.user.location.city}</p>
+          <p className="card-text"><strong>State:</strong> {this.props.user.location.state}</p>
+</div>
+<div className="right-card">
+          <p className="card-text"><strong>Gender:</strong> {this.props.user.gender}</p>
+          <p className="card-text"><strong>Email:</strong> {this.props.user.email}</p>
+          <p className="card-text"><strong>Cell Phone:</strong> {this.props.user.cell}</p>
+          <p className="card-text"><strong>Date of Birth:</strong> {this.props.user.dob}</p>
+
+          </div>
+
         </div>
         <div className="card-footer text-muted">
-          2 days ago
+          <a href="#" className="btn btn-primary">View Profile</a>
+            <a href="#" className="btn btn-primary">Send Message</a>
         </div>
       </div>
 

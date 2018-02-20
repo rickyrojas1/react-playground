@@ -37,7 +37,7 @@ onMouseClick(){
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </p>
-              <button type="button" onClick={this.onMouseClick} className="btn btn-outline-danger">Get API Stuff</button>
+              <button type="button" onClick={this.onMouseClick} className="btn btn-secondary">Get API Stuff</button>
             </div>
             <div className="col-xl-6 col-centered">
               <img src={dev} className="laptop"/>

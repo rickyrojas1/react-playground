@@ -10,13 +10,24 @@
 }
 
 .App-header {
-    background: linear-gradient(to right, #000000, #00E39F);
+    background: linear-gradient(to right, #000000, #05284c);
   height: 50px;
   padding: 0px;
   color: white;
   border-bottom: .02px solid white;
-box-shadow: 10px 15px 5px #000000;
+box-shadow: 1px 1px 15px #ffffff;
+position: sticky;
 
+
+}
+.btn{
+  margin: 10px;
+  box-shadow: 3px 3px 5px #000000;
+
+}
+.btn:hover{
+  margin: 10px;
+  box-shadow:  7px 7px 5px #000000;
 
 }
 
@@ -139,7 +150,41 @@ padding-bottom: 20px;
 }
 
 .card{
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  box-shadow: 1px 1px 10px #000000;
+  width: 90%;
+
+
+}
+.card-text{
+  padding: 0;
+  margin:auto;
+
+}
+.card-block{
+  margin: 20px;
+}
+.left-card{
+  padding: 0;
+  margin:auto;
+  float: left;
+  margin-left: 20%;
+}
+.right-card{
+  padding: 0;
+  margin:auto;
+  float: right;
+  margin-right: 20%;
+}
+.thumbnail{
+  border-radius: 50%;
+  width: 80px;
+  box-shadow: 1px 1px 4px #000000;
+}
+.thumbnail:hover{
+
+    box-shadow: 1px 1px 30px #000000;
 }
 
 
